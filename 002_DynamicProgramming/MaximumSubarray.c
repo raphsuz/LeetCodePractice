@@ -27,7 +27,7 @@ int MaxSubarray(int* nums, int numsSize) {
 
 int main(void) {
     int result = 0;
-    int input[8] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int input[9] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
     result = MaxSubarray(input, 9);
     printf("The max subarray summation is %d!", result);
     }
