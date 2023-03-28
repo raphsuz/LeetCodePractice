@@ -1,0 +1,11 @@
+function removeElement(nums: number[], val: number): number {
+    let slowIndicator: number = 0, fastIndicator: number = 0;
+    while (fastIndicator < nums.length) {
+        if (nums[fastIndicator] !== val) {
+            nums[slowIndicator] = nums[fastIndicator];
+            slowIndicator = slowIndicator + 1;
+        }
+        fastIndicator = fastIndicator + 1;
+    }
+    return slowIndicator;
+};
