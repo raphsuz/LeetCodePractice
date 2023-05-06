@@ -1,11 +1,15 @@
-#ifndef LINKED_LIST_H
-#define LINKED_LIST_H
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 
-typedef struct Node {
+struct Node {
+    struct Node* next;
     int data;
-    struct Node *next;
-} Node;
+};
 
-Node *create_node(int data, Node *next);
+void push(struct Node** head_ptr, int new_data);
+void append(struct Node** head_ptr, int new_data);
+void insertAfter(struct Node* prev_node, int new_data);
+void deleteNode(struct Node** head_ptr, int key);
+void printList(struct Node* node);
 
-#endif // LINKED_LIST_H
+#endif
